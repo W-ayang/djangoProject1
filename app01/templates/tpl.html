@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最爱吃兽奶</title>
+</head>
+<body>
+    <h1>模板语法学习</h1>
+    <div>{{ n1 }}</div>
+    <div>{{ n2 }}</div>
+    <div>
+        {% for item in n2 %}
+            <span>{{ item }}</span>
+        {% endfor %}
+    </div>
+<hr/>
+{{ n3 }}
+{{ n3.name }}
+<ul>
+    {% for k,v in n3.items %}
+        <li>{{ k }} = {{ v }}</li>
+    {% endfor %}
+</ul>
+<hr/>
+{% for item in n4 %}
+    <div>
+        {% for k,v in item.items %}
+            <span>{{ k }} : {{ v }}</span>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+<hr/>
+{% if n1 == "马超 " %}
+    <h1>哒哒哒哒哒</h1>
+{% elif n1 == "haha " %}
+
+{% else %}
+    <h1>嘟嘟嘟嘟嘟</h1>
+{% endif %}
+</body>
+</html>

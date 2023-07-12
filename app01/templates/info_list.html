@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+</head>
+<body>
+<h1>INFO列表</h1>
+
+<a href="http://127.0.0.1:8080/info/add/">添加</a>
+
+<table border ="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>密码</th>
+            <th>年龄</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in data_list %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.password }}</td>
+            <td>{{ item.age }}</td>
+        <th>{{ item.event_start|date:'Y-m-d H:i:s' }}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
+
